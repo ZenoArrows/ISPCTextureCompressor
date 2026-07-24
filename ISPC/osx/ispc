@@ -26,9 +26,9 @@ build_ispc() {
 }
 
 build_ispc \
-    "ispc_texcomp/kernel.ispc" \
+    "../../ispc_texcomp/kernel.ispc" \
     "kernel"
 
 build_ispc \
-    "ispc_texcomp/kernel_astc.ispc" \
+    "../../ispc_texcomp/kernel_astc.ispc" \
     "kernel_astc"
