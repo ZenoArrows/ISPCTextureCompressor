@@ -14,8 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: make
-      run: make
+      run: make -f Makefile.linux
     - name: make check
-      run: make check
+      run: make -f Makefile.linux check
     - name: make distcheck
-      run: make distcheck
+      run: make -f Makefile.linux distcheck
