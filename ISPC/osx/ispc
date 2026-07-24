@@ -2,7 +2,7 @@ build_ispc() {
     SRC="$1"
     NAME="$2"
 
-    "${ISPC}" \
+    ispc \
         --arch=arm64 \
         --target=neon-i32x4 \
         -O2 \
@@ -10,7 +10,7 @@ build_ispc() {
         "${SRC}" \
         -o "$OBJROOT/${NAME}-arm64.o"
 
-    "${ISPC}" \
+    ispc \
         --arch=x86-64 \
         --target=sse2,avx \
         -O2 \
