@@ -2,16 +2,13 @@ build_ispc() {
     SRC="$1"
     NAME="$2"
 
-    mkdir -p "${OUT}/arm64"
-    mkdir -p "${OUT}/x86_64"
-
     "${ISPC}" \
         --arch=arm64 \
         --target=neon-i32x4 \
         -O2 \
         --opt=fast-math \
         "${SRC}" \
-        -o "${OUT}/arm64/${NAME}.o"
+        -o "$OBJROOT/${NAME}-arm64.o"
 
     "${ISPC}" \
         --arch=x86-64 \
@@ -19,19 +16,19 @@ build_ispc() {
         -O2 \
         --opt=fast-math \
         "${SRC}" \
-        -o "${OUT}/x86_64/${NAME}.o"
+        -o "$OBJROOT/${NAME}-x86_64.o"
 
     lipo \
         -create \
-        "${OUT}/arm64/${NAME}.o" \
-        "${OUT}/x86_64/${NAME}.o" \
-        -output "${OUT}/${NAME}.o"
+        "$OBJROOT/${NAME}-arm64.o" \
+        "$OBJROOT/${NAME}-x86_64.o" \
+        -output "$OBJROOT/${NAME}.o"
 }
 
 build_ispc \
-    "path/to/kernel.ispc" \
+    "ispc_texcomp/kernel.ispc" \
     "kernel"
 
 build_ispc \
-    "path/to/kernel_astc.ispc" \
+    "ispc_texcomp/kernel_astc.ispc" \
     "kernel_astc"
