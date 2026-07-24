@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v4
     - name: install ISPC
       uses: ispc/install-ispc-action@main
-    - uses: actions/checkout@v4
     - name: make
       run: make -f Makefile.linux
     - name: make check
