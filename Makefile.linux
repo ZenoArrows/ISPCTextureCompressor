@@ -1,7 +1,7 @@
 uname_P := $(shell sh -c 'uname -p 2>/dev/null || echo not')
 
 CXX ?= g++
-ISPC ?= ISPC/linux/ispc
+ISPC ?= ispc
 CXXFLAGS ?= -O2 $(ARCH_CXXFLAGS) -fPIC -I.
 ISPC_FLAGS ?= -O2 --arch=$(ISPC_ARCH) --target=$(ISPC_TARGETS) --opt=fast-math --pic
 LDFLAGS ?= -shared -rdynamic
