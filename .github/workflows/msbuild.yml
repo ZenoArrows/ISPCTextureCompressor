@@ -43,7 +43,7 @@ jobs:
       run: msbuild /m /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0 /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
 
     - name: Upload Library Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: ispc_texcomp
         path: "ISPC Texture Compressor/x64/Release/ispc_texcomp.dll"
@@ -51,7 +51,7 @@ jobs:
         archive: false
         
     - name: Upload Sample Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: ISPCTextureCompressor
         path: "ISPC Texture Compressor/x64/Release/ISPC Texture Compressor.exe"
