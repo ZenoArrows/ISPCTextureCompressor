@@ -152,9 +152,9 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ispc.exe -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=sse2,sse4,avx,avx2 --opt=fast-math</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)%(Filename).obj;$(TargetDir)%(Filename)_sse2.obj;$(TargetDir)%(Filename)_sse4.obj;$(TargetDir)%(Filename)_avx.obj;$(TargetDir)%(Filename)_avx2.obj;</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(TargetDir)%(Filename).obj;$(TargetDir)%(Filename)_sse2.obj;$(TargetDir)%(Filename)_sse4.obj;$(TargetDir)%(Filename)_avx.obj;$(TargetDir)%(Filename)_avx2.obj;</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(ProjectDir)..\ISPC\win\ispc.exe" -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --arch=x86 --target=sse2,sse4,avx,avx2 --opt=fast-math</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ispc.exe -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --arch=x86 --target=sse2,sse4,avx,avx2 --opt=fast-math</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)%(Filename).obj;$(TargetDir)%(Filename)_sse2.obj;$(TargetDir)%(Filename)_sse4.obj;$(TargetDir)%(Filename)_avx.obj;$(TargetDir)%(Filename)_avx2.obj;</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(ProjectDir)..\ISPC\win\ispc.exe" -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=sse2,sse4,avx,avx2 --opt=fast-math</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ispc.exe -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=sse2,sse4,avx,avx2 --opt=fast-math</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(TargetDir)%(Filename).obj;$(TargetDir)%(Filename)_sse2.obj;$(TargetDir)%(Filename)_sse4.obj;$(TargetDir)%(Filename)_avx.obj;$(TargetDir)%(Filename)_avx2.obj;</Outputs>
     </CustomBuild>
   </ItemGroup>
@@ -165,9 +165,9 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(TargetDir)%(Filename).obj;$(TargetDir)%(Filename)_sse2.obj;$(TargetDir)%(Filename)_sse4.obj;$(TargetDir)%(Filename)_avx.obj;$(TargetDir)%(Filename)_avx2.obj;</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ispc.exe -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=avx --opt=fast-math</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(TargetDir)%(Filename).obj;</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(ProjectDir)..\ISPC\win\ispc.exe" -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --arch=x86 --target=sse2,sse4,avx,avx2 --opt=fast-math</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ispc.exe -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --arch=x86 --target=sse2,sse4,avx,avx2 --opt=fast-math</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)%(Filename).obj;$(TargetDir)%(Filename)_sse2.obj;$(TargetDir)%(Filename)_sse4.obj;$(TargetDir)%(Filename)_avx.obj;$(TargetDir)%(Filename)_avx2.obj;</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(ProjectDir)..\ISPC\win\ispc.exe" -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --arch=x86 --target=avx --opt=fast-math</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ispc.exe -O2 "%(Filename).ispc" -o "$(TargetDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --arch=x86 --target=avx --opt=fast-math</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)%(Filename).obj;</Outputs>
     </CustomBuild>
   </ItemGroup>
