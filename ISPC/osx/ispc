@@ -1,7 +1,37 @@
-ISPC_ARCH_ARGS="--arch=x86-64 --target=sse2,avx"
+build_ispc() {
+    SRC="$1"
+    NAME="$2"
 
-if [ "$CURRENT_ARCH" = "arm64" ]; then
-    ISPC_ARCH_ARGS="--arch=arm64 --target=neon-i32x4"
-fi
+    mkdir -p "${OUT}/arm64"
+    mkdir -p "${OUT}/x86_64"
 
-ispc $ISPC_ARCH_ARGS $@
+    "${ISPC}" \
+        --arch=arm64 \
+        --target=neon-i32x4 \
+        -O2 \
+        --opt=fast-math \
+        "${SRC}" \
+        -o "${OUT}/arm64/${NAME}.o"
+
+    "${ISPC}" \
+        --arch=x86-64 \
+        --target=sse2,avx \
+        -O2 \
+        --opt=fast-math \
+        "${SRC}" \
+        -o "${OUT}/x86_64/${NAME}.o"
+
+    lipo \
+        -create \
+        "${OUT}/arm64/${NAME}.o" \
+        "${OUT}/x86_64/${NAME}.o" \
+        -output "${OUT}/${NAME}.o"
+}
+
+build_ispc \
+    "path/to/kernel.ispc" \
+    "kernel"
+
+build_ispc \
+    "path/to/kernel_astc.ispc" \
+    "kernel_astc"
