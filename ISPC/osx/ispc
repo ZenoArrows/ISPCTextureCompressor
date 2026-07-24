@@ -1,0 +1,7 @@
+ISPC_ARCH_ARGS="--arch=x86-64 --target=sse2,avx"
+
+if [ "$CURRENT_ARCH" = "arm64" ]; then
+    ISPC_ARCH_ARGS="--arch=arm64 --target=neon-i32x4"
+fi
+
+ispc $ISPC_ARCH_ARGS $@
