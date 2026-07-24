@@ -48,6 +48,7 @@ jobs:
         name: ispc_texcomp
         path: "ISPC Texture Compressor/x64/Release/ispc_texcomp.dll"
         retention-days: 7
+        archive: false
         
     - name: Upload Sample Artifact
       uses: actions/upload-artifact@v4
@@ -55,3 +56,4 @@ jobs:
         name: ISPCTextureCompressor
         path: "ISPC Texture Compressor/x64/Release/ISPC Texture Compressor.exe"
         retention-days: 7
+        archive: false
