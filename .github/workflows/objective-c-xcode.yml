@@ -31,6 +31,7 @@ jobs:
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild clean build analyze -scheme "$scheme" -"$filetype_parameter" "$file_to_build" | xcpretty && exit ${PIPESTATUS[0]}
       - name: Upload ARM64 Log
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: ispc_texcomp
@@ -38,6 +39,7 @@ jobs:
           retention-days: 7
           archive: false
       - name: Upload x86_64 Log
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: ispc_texcomp
