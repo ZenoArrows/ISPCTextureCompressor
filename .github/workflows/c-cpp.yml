@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Ubuntu x86-64 CI
 
 on:
   push:
