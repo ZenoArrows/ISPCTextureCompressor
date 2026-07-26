@@ -22,7 +22,7 @@ build_ispc() {
         -create \
         "$OBJROOT/${NAME}-arm64.o" \
         "$OBJROOT/${NAME}-x86_64.o" \
-        -output "$OBJROOT/${NAME}.o" > /Users/runner/ispc.log
+        -output "$OBJROOT/${NAME}.o"
 }
 
 build_ispc \
