@@ -40,4 +40,4 @@ jobs:
           archive: false
       - name: List build folder
         if: always()
-        run: ls /Users/runner/Library/Developer/Xcode/DerivedData/ispc_texcomp-dygxdvashlktyrdngtpyszclferg/Logs
+        run: ls /Users/runner/Library/Developer/Xcode/DerivedData/ispc_texcomp-dygxdvashlktyrdngtpyszclferg/Logs/Build
