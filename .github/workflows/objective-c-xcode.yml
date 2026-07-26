@@ -38,4 +38,3 @@ jobs:
           path: /Users/runner/ispc.log
           retention-days: 7
           archive: false
-          archive: false
