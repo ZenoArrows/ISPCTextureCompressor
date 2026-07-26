@@ -30,19 +30,12 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild clean build analyze -scheme "$scheme" -"$filetype_parameter" "$file_to_build" | xcpretty && exit ${PIPESTATUS[0]}
-      - name: Upload ARM64 Log
+      - name: Upload ISPC Log
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: ispc_texcomp
-          path: /Users/runner/arm64.log
+          path: /Users/runner/ispc.log
           retention-days: 7
           archive: false
-      - name: Upload x86_64 Log
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: ispc_texcomp
-          path: /Users/runner/x86_64.log
-          retention-days: 7
           archive: false
