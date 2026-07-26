@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: logs
-          path: /Users/runner/Library/Developer/Xcode/DerivedData/ispc_texcomp-dygxdvashlktyrdngtpyszclferg/Logs
+          path: /Users/runner/Library/Developer/Xcode/DerivedData/ispc_texcomp-dygxdvashlktyrdngtpyszclferg
           retention-days: 7
       - name: Upload ispc_texcomp
         if: always()
