@@ -8,7 +8,7 @@ build_ispc() {
         -O2 \
         --opt=fast-math \
         "${SRC}" \
-        -o "$OBJROOT/${NAME}-arm64.o" > /Users/runner/arm64.log
+        -o "$OBJROOT/${NAME}-arm64.o" 2> /Users/runner/arm64.log
 
     ispc \
         --arch=x86-64 \
@@ -16,7 +16,7 @@ build_ispc() {
         -O2 \
         --opt=fast-math \
         "${SRC}" \
-        -o "$OBJROOT/${NAME}-x86_64.o" > /Users/runner/x86_64.log
+        -o "$OBJROOT/${NAME}-x86_64.o" 2> /Users/runner/x86_64.log
 
     lipo \
         -create \
