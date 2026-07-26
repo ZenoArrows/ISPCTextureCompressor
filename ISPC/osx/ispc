@@ -32,10 +32,10 @@ build_ispc() {
 
 build_ispc \
     "ispc_texcomp/kernel.ispc" \
-    "ispc_texcomp/kernel.h" \
+    "ispc_texcomp/kernel_ispc.h" \
     "kernel"
 
 build_ispc \
     "ispc_texcomp/kernel_astc.ispc" \
-    "ispc_texcomp/kernel_astc.h" \
+    "ispc_texcomp/kernel_astc_ispc.h" \
     "kernel_astc"
