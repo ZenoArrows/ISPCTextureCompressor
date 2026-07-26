@@ -3,7 +3,7 @@ build_ispc() {
     NAME="$2"
 
     ispc \
-        --arch=arm64 \
+        --arch=aarch64 \
         --target=neon-i32x4 \
         -O2 \
         --opt=fast-math \
