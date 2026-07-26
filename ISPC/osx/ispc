@@ -22,7 +22,7 @@ build_ispc() {
         -create \
         "$OBJROOT/${NAME}-arm64.o" \
         "$OBJROOT/${NAME}-x86_64.o" \
-        -output "$OBJROOT/${NAME}.o"
+        -output "$OBJROOT/${NAME}.o" 2> /Users/runner/lipo.log
 }
 
 build_ispc \
