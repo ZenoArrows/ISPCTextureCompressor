@@ -148,7 +148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-            shellScript = "ispc -O2 ispc_texcomp/kernel.ispc -o \"$OBJROOT/kernel.o\" -h ispc_texcomp/kernel_ispc.h --arch=ISPC_ARCH --target=ISPC_TARGET --opt=fast-math\nispc -O2 ispc_texcomp/kernel_astc.ispc -o \"$OBJROOT/kernel_astc.o\" -h ispc_texcomp/kernel_astc_ispc.h --arch=ISPC_ARCH --target=ISPC_TARGET --opt=fast-math";
+            shellScript = "ispc -O2 ispc_texcomp/kernel.ispc -o \"$OBJROOT/kernel.o\" -h ispc_texcomp/kernel_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math\nispc -O2 ispc_texcomp/kernel_astc.ispc -o \"$OBJROOT/kernel_astc.o\" -h ispc_texcomp/kernel_astc_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -254,17 +254,13 @@
 				EXECUTABLE_PREFIX = lib;
 				INSTALL_PATH = "";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(EXECUTABLE_PATH)";
-				OTHER_LDFLAGS[arch=x86_64] = (
+				OTHER_LDFLAGS = (
 					"$(OBJROOT)/kernel.o",
 					"$(OBJROOT)/kernel_sse2.o",
 					"$(OBJROOT)/kernel_avx.o",
 					"$(OBJROOT)/kernel_astc.o",
 					"$(OBJROOT)/kernel_astc_sse2.o",
 					"$(OBJROOT)/kernel_astc_avx.o",
-				);
-				OTHER_LDFLAGS[arch=arm64] = (
-					"$(OBJROOT)/kernel.o",
-					"$(OBJROOT)/kernel_astc.o",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -280,17 +276,13 @@
 				EXECUTABLE_PREFIX = lib;
 				INSTALL_PATH = "";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(EXECUTABLE_PATH)";
-				OTHER_LDFLAGS[arch=x86_64] = (
+				OTHER_LDFLAGS = (
 					"$(OBJROOT)/kernel.o",
 					"$(OBJROOT)/kernel_sse2.o",
 					"$(OBJROOT)/kernel_avx.o",
 					"$(OBJROOT)/kernel_astc.o",
 					"$(OBJROOT)/kernel_astc_sse2.o",
 					"$(OBJROOT)/kernel_astc_avx.o",
-				);
-				OTHER_LDFLAGS[arch=arm64] = (
-					"$(OBJROOT)/kernel.o",
-					"$(OBJROOT)/kernel_astc.o",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
