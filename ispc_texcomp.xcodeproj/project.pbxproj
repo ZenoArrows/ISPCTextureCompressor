@@ -259,8 +259,6 @@
 					"$(OBJROOT)/kernel_sse2.o",
 					"$(OBJROOT)/kernel_avx.o",
 					"$(OBJROOT)/kernel_astc.o",
-					"$(OBJROOT)/kernel_astc_sse2.o",
-					"$(OBJROOT)/kernel_astc_avx.o",
 				);
 				"OTHER_LDFLAGS[arch=arm64]" = (
 					"$(OBJROOT)/kernel_neon.o",
@@ -285,8 +283,6 @@
 					"$(OBJROOT)/kernel_sse2.o",
 					"$(OBJROOT)/kernel_avx.o",
 					"$(OBJROOT)/kernel_astc.o",
-					"$(OBJROOT)/kernel_astc_sse2.o",
-					"$(OBJROOT)/kernel_astc_avx.o",
 				);
 				"OTHER_LDFLAGS[arch=arm64]" = (
 					"$(OBJROOT)/kernel_neon.o",
