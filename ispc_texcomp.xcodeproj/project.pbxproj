@@ -205,8 +205,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				"ISPC_ARCH[arch=x86_64]" = "x86-64";
-				"ISPC_TARGET[arch=x86_64]" = "sse2,avx";
+				ISPC_ARCH = "x86-64";
+				ISPC_TARGET = "sse2,avx";
 			};
 			name = Debug;
 		};
@@ -243,8 +243,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				"ISPC_ARCH[arch=x86_64]" = "x86-64";
-				"ISPC_TARGET[arch=x86_64]" = "sse2,avx";
+				ISPC_ARCH = "x86-64";
+				ISPC_TARGET = "sse2,avx";
 			};
 			name = Release;
 		};
