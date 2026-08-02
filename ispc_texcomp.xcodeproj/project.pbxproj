@@ -264,7 +264,7 @@
 					"$(OBJROOT)/kernel_neon.o",
 					"$(OBJROOT)/kernel_astc_neon.o",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)_$(CURRENT_ARCH)";
 			};
 			name = Debug;
 		};
@@ -288,7 +288,7 @@
 					"$(OBJROOT)/kernel_neon.o",
 					"$(OBJROOT)/kernel_astc_neon.o",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)_$(CURRENT_ARCH)";
 			};
 			name = Release;
 		};
