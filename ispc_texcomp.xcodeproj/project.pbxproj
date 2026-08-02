@@ -17,7 +17,7 @@
 		2B731BBE1C8DB22300A9B109 /* Copy dylib into final location */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "$(PROJECT_DIR)/build";
+			dstPath = "$(PROJECT_DIR)/build/$(CURRENT_ARCH)";
 			dstSubfolderSpec = 0;
 			files = (
 				2B731BBF1C8DB24000A9B109 /* libispc_texcomp.dylib in Copy dylib into final location */,
