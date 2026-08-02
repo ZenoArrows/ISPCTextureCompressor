@@ -240,7 +240,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				ARCHS="x86_64 arm64"
+				ARCHS = "x86_64 arm64";
 				SDKROOT = macosx;
 			};
 			name = Release;
