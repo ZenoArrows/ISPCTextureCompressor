@@ -148,7 +148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-            shellScript = "echo $ARCHS\nispc -O2 ispc_texcomp/kernel.ispc -o \"$OBJROOT/kernel.o\" -h ispc_texcomp/kernel_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math\nispc -O2 ispc_texcomp/kernel_astc.ispc -o \"$OBJROOT/kernel_astc.o\" -h ispc_texcomp/kernel_astc_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math";
+            shellScript = "echo $CURRENT_ARCH\nispc -O2 ispc_texcomp/kernel.ispc -o \"$OBJROOT/kernel.o\" -h ispc_texcomp/kernel_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math\nispc -O2 ispc_texcomp/kernel_astc.ispc -o \"$OBJROOT/kernel_astc.o\" -h ispc_texcomp/kernel_astc_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -205,8 +205,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				"ISPC_ARCH[arch=x86_64]" = "x86-64";
-				"ISPC_TARGET[arch=x86_64]"= "sse2,avx";
+				ISPC_ARCH = "x86-64";
+				ISPC_TARGET = "sse2,avx";
 			};
 			name = Debug;
 		};
@@ -242,9 +242,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				"ISPC_ARCH[arch=x86_64]" = "x86-64";
-				"ISPC_TARGET[arch=x86_64]" = "sse2,avx";
+				ISPC_ARCH = "x86-64";
+				ISPC_TARGET = "sse2,avx";
 			};
 			name = Release;
 		};
