@@ -17,7 +17,7 @@
 		2B731BBE1C8DB22300A9B109 /* Copy dylib into final location */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "$(PROJECT_DIR)/build/$(CURRENT_ARCH)";
+			dstPath = "$(PROJECT_DIR)/build";
 			dstSubfolderSpec = 0;
 			files = (
 				2B731BBF1C8DB24000A9B109 /* libispc_texcomp.dylib in Copy dylib into final location */,
@@ -205,8 +205,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				ISPC_ARCH = "x86-64";
-				ISPC_TARGET = "sse2,avx";
+				ISPC_ARCH[archs=x86_64] = "x86-64";
+				ISPC_TARGET[archs=x86_64]= "sse2,avx";
 			};
 			name = Debug;
 		};
@@ -243,8 +243,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				ISPC_ARCH = "x86-64";
-				ISPC_TARGET = "sse2,avx";
+				ISPC_ARCH[archs=x86_64] = "x86-64";
+				ISPC_TARGET[archs=x86_64] = "sse2,avx";
 			};
 			name = Release;
 		};
