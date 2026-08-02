@@ -148,7 +148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-            shellScript = "ispc -O2 ispc_texcomp/kernel.ispc -o \"$OBJROOT/kernel.o\" -h ispc_texcomp/kernel_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math\nispc -O2 ispc_texcomp/kernel_astc.ispc -o \"$OBJROOT/kernel_astc.o\" -h ispc_texcomp/kernel_astc_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math";
+            shellScript = "echo $CURRENT_ARCH\nispc -O2 ispc_texcomp/kernel.ispc -o \"$OBJROOT/kernel.o\" -h ispc_texcomp/kernel_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math\nispc -O2 ispc_texcomp/kernel_astc.ispc -o \"$OBJROOT/kernel_astc.o\" -h ispc_texcomp/kernel_astc_ispc.h --arch=$ISPC_ARCH --target=$ISPC_TARGET --opt=fast-math";
 		};
 /* End PBXShellScriptBuildPhase section */
 
