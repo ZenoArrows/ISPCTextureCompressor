@@ -205,6 +205,10 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				"ISPC_ARCH[arch=x86_64]" = "x86-64";
+				"ISPC_TARGET[arch=x86_64]" = "sse2,avx";
+				"ISPC_ARCH[arch=arm64]" = "aarch64";
+				"ISPC_TARGET[arch=arm64]" = "neon-i32x4";
 			};
 			name = Debug;
 		};
@@ -241,6 +245,10 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				"ISPC_ARCH[arch=x86_64]" = "x86-64";
+				"ISPC_TARGET[arch=x86_64]" = "sse2,avx";
+				"ISPC_ARCH[arch=arm64]" = "aarch64";
+				"ISPC_TARGET[arch=arm64]" = "neon-i32x4";
 			};
 			name = Release;
 		};
@@ -254,13 +262,17 @@
 				EXECUTABLE_PREFIX = lib;
 				INSTALL_PATH = "";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(EXECUTABLE_PATH)";
-				OTHER_LDFLAGS = (
+				"OTHER_LDFLAGS[arch=x86_64]" = (
 					"$(OBJROOT)/kernel.o",
 					"$(OBJROOT)/kernel_sse2.o",
 					"$(OBJROOT)/kernel_avx.o",
 					"$(OBJROOT)/kernel_astc.o",
 					"$(OBJROOT)/kernel_astc_sse2.o",
 					"$(OBJROOT)/kernel_astc_avx.o",
+				);
+				"OTHER_LDFLAGS[arch=arm64]" = (
+					"$(OBJROOT)/kernel.o",
+					"$(OBJROOT)/kernel_astc.o",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -276,13 +288,17 @@
 				EXECUTABLE_PREFIX = lib;
 				INSTALL_PATH = "";
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(EXECUTABLE_PATH)";
-				OTHER_LDFLAGS = (
+				"OTHER_LDFLAGS[arch=x86_64]" = (
 					"$(OBJROOT)/kernel.o",
 					"$(OBJROOT)/kernel_sse2.o",
 					"$(OBJROOT)/kernel_avx.o",
 					"$(OBJROOT)/kernel_astc.o",
 					"$(OBJROOT)/kernel_astc_sse2.o",
 					"$(OBJROOT)/kernel_astc_avx.o",
+				);
+				"OTHER_LDFLAGS[arch=arm64]" = (
+					"$(OBJROOT)/kernel.o",
+					"$(OBJROOT)/kernel_astc.o",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
